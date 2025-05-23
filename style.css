@@ -339,3 +339,164 @@ html {
   scroll-snap-align: start;
   height: 10;
 }
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 720px){
+    .menu{
+    display: none;        
+    }
+
+
+
+    .hero h1{
+        font-size: 48px;
+    }.hero h2{
+        font-size: 18px;
+    }
+
+
+
+/*HABILIDADES*/
+.habilidades{
+    width:100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.skills{
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: absolute;
+    right:0;
+    perspective: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.skills::-webkit-scrollbar{
+    display: none;
+}
+.skills .angulo{
+    width:100%;
+    height:100vh;
+    transform: rotateY(-20deg);
+    margin-top: 90px;
+    position: absolute;
+    right: 0;
+}
+.angulo h1{
+    font-size: 98px;
+    margin-left: 30%;
+    color: rgba(255, 255, 255, 0.4);
+    transition: .3s ease;
+    cursor: default;
+    line-height: 100px;
+    margin-top: 30px;
+}.angulo h1:hover{
+    color: var(--color2);
+    transform: scale(.9);
+}
+
+
+.project-img{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/*CONTATO*/
+
+
+.contato{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}.contato h2{
+    max-width: 600px;
+    font-size: 48px;
+    position: absolute;
+    top: 20%;
+    transform: translateX(-50%);
+    color: var(--color1);
+}
+
+.contato form{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.contato input{
+    margin: 40px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid black;
+}.contato input:focus{
+    outline: none;
+    border-bottom: 2px solid var(--color1);
+}.contato input:focus::placeholder{
+    color: transparent;
+}.contato #msg{
+    position: absolute;
+    top: 80%;
+    width: 400px;
+    border: none;
+    border-bottom: 2px solid black;
+}.contato #msg:focus{
+    outline: none;
+    border-bottom: 2px solid var(--color1);
+}.contato #msg:focus::placeholder{
+    color: transparent;
+}
+
+.contato #enviar{
+    background-size: 0%;
+    position: absolute;
+    top: 100%;
+    border: 1px solid var(--color1);
+    width: 200px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 1;
+}.contato #enviar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+    z-index: -1;
+}.contato #enviar:hover{
+    color: white;
+}.contato #enviar:hover::before{
+    transform: scaleX(1);
+}
+
+}
