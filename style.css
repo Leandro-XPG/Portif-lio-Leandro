@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Genos&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --color1:black;
+    --color2:white;
+}
+
+body{
+    background-color: var(--color1);
+    background-size: 900%;
+    animation: fundo 10s ease infinite;
+}
+
+h1,h2,h3,p,a{
+    font-family: 'genos',sans-serif;
+    text-decoration: none;
+}
+
+
+
+/*MENU*/
+.menu{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.200);
+    z-index:99999 ;
+    transition: all .3s ease;
+}.menu.scrolled{
+    background-color: var(--color2);
+    transition: all .3s ease;
+}.menu.scrolled ul li a{
+    color: var(--color1);
+}.menu.scrolled ul li::before{
+    background-color: var(--color1);
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}.menu ul li a{
+    color: var(--color2);
+}.menu ul li{
+    margin: 20px 50px;
+    cursor: pointer;
+    transition: .5s ease;
+    font-family: 'genos',sans-serif;
+    font-size: 18px;
+}.menu ul li:hover{
+    transform: scale(1.1);
+}.menu ul li::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    background-color: var(--color2);
+    transform-origin: left;
+    transition:  .5s ease;
+}.menu ul li:hover::before{
+    transform: scaleX(1);
+}
+
+/*INICIO*/
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.hero h1{
+    font-size: 64px;
+    color: var(--color2);
+    cursor: default;
+}.hero h2{
+    color: var(--color2);
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%);
+    cursor: default;
+}
+
+
+/*FORMAÇÃO*/
+
+.habilidades{
+    width:100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.skills{
+    width: 100%;
+    height: 90vh;
+    background-color: transparent;
+    position: absolute;
+    right:0;
+    perspective: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.skills::-webkit-scrollbar{
+    display: none;
+}
+.skills .angulo{
+    width:50%;
+    height:100vh;
+    transform: rotateY(-20deg);
+    margin-top: 90px;
+    position: absolute;
+    right: 0;
+}
+.angulo h1{
+    font-size: 198px;
+    margin-left: 15%;
+    color: rgba(255, 255, 255, 0.4);
+    transition: .3s ease;
+    cursor: default;
+    line-height: 150px;
+    margin-top: 30px;
+}.angulo h1:hover{
+    color: var(--color2);
+    transform: scale(.9);
+}
+
+
+.project-img{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/*YUPI*/
+.yupi{
+    position: absolute;
+    left: 20%;
+    opacity: 0;
+    visibility: hidden;
+    transition:.3s ease ;
+    
+}
+.yupi img{
+    width: 70%;
+    border-radius: 30px;
+}
+
+.projetos.show .yupi{
+    opacity: 100%;
+    visibility: visible;
+}
+
+
+/*REDLOCK*/
+.redlock{
+    position: absolute;
+    left: 20%;
+    opacity: 0;
+    visibility: hidden;
+    transition:.3s ease ;
+}.redlock img{
+    width: 70%;
+    border-radius: 30px;
+}
+
+
+/*PROJETOS*/
+
+.projetos{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.projetos .project2 .select-project{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 1px solid var(--color2);
+}.select-project ul{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+.select-project ul li a{
+    color: white;
+    list-style: none;
+    font-family: 'genos',sans-serif;
+    font-size: 36px;
+}.select-project ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: var(--color2);
+    transition: transform .5s ease;
+}.select-project ul li a:hover::before{
+    transform: scaleX(1);
+}
+
+
+/*CONTATO*/
+.contato{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}.contato h2{
+    font-size: 64px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color1);
+}
+
+.contato form{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.contato input{
+    margin: 50px;
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid black;
+}.contato input:focus{
+    outline: none;
+    border-bottom: 2px solid var(--color1);
+}.contato input:focus::placeholder{
+    color: transparent;
+}.contato #msg{
+    position: absolute;
+    top: 80%;
+    width: 600px;
+    border: none;
+    border-bottom: 2px solid black;
+}.contato #msg:focus{
+    outline: none;
+    border-bottom: 2px solid var(--color1);
+}.contato #msg:focus::placeholder{
+    color: transparent;
+}
+
+.contato #enviar{
+    background-size: 0%;
+    position: absolute;
+    top: 100%;
+    border: 1px solid var(--color1);
+    width: 200px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 1;
+}.contato #enviar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+    z-index: -1;
+}.contato #enviar:hover{
+    color: white;
+}.contato #enviar:hover::before{
+    transform: scaleX(1);
+}
+
+/*FOOTER*/
+
+.footer{
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.footer ul{
+    display: flex;
+    gap: 40px;
+}.footer ul li{
+    list-style: none;
+    transition: .3s ease;
+}.footer ul li:hover{
+    transform: scale(1.1);
+}.footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: scroll; /* Garante a barra de rolagem */
+}
+
+.section {
+  scroll-snap-align: start;
+  height: 10;
+}
