@@ -180,6 +180,10 @@ h1,h2,h3,p,a,li{
  }
 
 
+ .project-m{
+    display: none;
+ }
+
 
 
 /*CONTATO*/
@@ -366,8 +370,37 @@ html {
 
 
 /*PROJETOS*/
+.projetos{
+    display: none;
+}
+
+.project-m{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.project-m h1{
+    position: absolute;
+    color: var(--color2);
+    top: 12%;
+    font-size: 48px;
+}.project-m .conteudo img{
+    width: 100%;
+    height: 505px;
+    
+}
 
 
+.carrossel-p{
+    width: 70%;
+    height: 60vh;
+    border-top: 2px solid var(--color2);
+    border-bottom: 2px solid var(--color2);
+}
 /*CONTATO*/
 
 
