@@ -18,7 +18,7 @@ body{
     animation: fundo 10s ease infinite;
 }
 
-h1,h2,h3,p,a{
+h1,h2,h3,p,a,li{
     font-family: 'genos',sans-serif;
     text-decoration: none;
 }
@@ -144,90 +144,42 @@ h1,h2,h3,p,a{
     transform: scale(.9);
 }
 
-
-.project-img{
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-
-/*YUPI*/
-.yupi{
-    position: absolute;
-    left: 20%;
-    opacity: 0;
-    visibility: hidden;
-    transition:.3s ease ;
-    
-}
-.yupi img{
-    width: 70%;
-    border-radius: 30px;
-}
-
-.projetos.show .yupi{
-    opacity: 100%;
-    visibility: visible;
-}
-
-
-/*REDLOCK*/
-.redlock{
-    position: absolute;
-    left: 20%;
-    opacity: 0;
-    visibility: hidden;
-    transition:.3s ease ;
-}.redlock img{
-    width: 70%;
-    border-radius: 30px;
-}
-
-
 /*PROJETOS*/
 
 .projetos{
-    width: 100%;
+    width: 95%;
     height: 100vh;
     position: relative;
 }
-.projetos .project2 .select-project{
-    width: 50%;
-    height: 100vh;
+ .projetos .project-title ul li{
+    color: var(--color2);
     position: absolute;
-    right: 0;
+    right: 10%;
+    top: 50%;
+    transform:translateY(-50%) ;
+    list-style: none;
+    cursor: pointer;
+    font-size: 48px;
+    transition: .5s ease;
+ }.projetos .project-title ul li:hover{
+    opacity: 70%;
+ }
+
+ .yupi-banner{
+    width: 50%;
+    position: absolute;
+    left: 4%;
     top: 50%;
     transform: translateY(-50%);
-    border-left: 1px solid var(--color2);
-}.select-project ul{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%);
-}
-.select-project ul li a{
-    color: white;
-    list-style: none;
-    font-family: 'genos',sans-serif;
-    font-size: 36px;
-}.select-project ul li a::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    transform: scaleX(0);
-    transform-origin: left;
-    background-color: var(--color2);
-    transition: transform .5s ease;
-}.select-project ul li a:hover::before{
-    transform: scaleX(1);
-}
+    border-radius: 20px 60px 10px 20px;
+ }.hidden{
+    opacity: 0;
+    transition: .5s ease;
+ }.yupi-project.show .yupi-banner{
+    opacity: 100%;
+ }
+
+
 
 
 /*CONTATO*/
@@ -411,14 +363,9 @@ html {
 }
 
 
-.project-img{
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
+
+
+/*PROJETOS*/
 
 
 /*CONTATO*/
@@ -499,4 +446,10 @@ html {
     transform: scaleX(1);
 }
 
+
+
+
 }
+
+
+
